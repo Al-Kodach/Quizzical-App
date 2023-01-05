@@ -1,0 +1,228 @@
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  /* outline: 1px solid limegreen !important;  */ 
+}
+
+:root {
+  --primary-ff: 'Karla', sans-serif;
+  --secondary-ff: Inter, Avenir, Helvetica, Arial, sans-serif;
+  --main-color: #293264;
+  --ans-tx-sz: 0.64rem;
+  --que-tx-sz: 1rem; 
+  line-height: 1.5rem;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Global styles */
+body {  
+  margin: 0;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+#root::before {
+  position: absolute;
+  content: "";
+  width: 10vmax;
+  height: 9.5vmax;
+  background: #FFFAD1;
+  z-index: 1;
+  right: 0%;
+  top: 0%;
+  border-bottom-left-radius: 6rem;
+  transform: rotate(1.29deg);
+}
+
+#root {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100dvh;
+  max-width: 50rem;
+  margin-inline: auto;
+  overflow: hidden;
+  background: #F5F7FB;
+  padding: 4rem;
+}
+
+#root::after {
+  position: absolute;
+  content: "";
+  width: 12vmax;
+  height: 10vmax;
+  background: #DEEBF8;
+  z-index: 1;
+  left: 0;
+  bottom: 0;
+  border-top-right-radius: 9rem;
+  transform: rotate(2.58deg);
+}
+
+.main {
+  width: min(100% - 2rem, 35rem);
+  margin-inline: auto;
+}
+
+
+/*** quiz typography ****/
+
+.question {
+  font-family: var(--primary-ff);
+  color: var(--main-color);
+  font-weight: 700;
+  font-size: var(--que-tx-sz);
+}
+
+.answer {
+  font-family: var(--secondary-ff);
+  color: var(--main-color);
+  font-weight: 500;
+  font-size: var(--ans-tx-sz);
+  border-radius: 0.5rem;
+  border: 0.05rem solid #4D5B9E;
+  cursor: pointer;
+  padding: .2rem .5rem;
+  text-align: center;
+}
+
+.scores-display {
+  text-align: center;
+  color: var(--main-color);
+  font-family: var(--secondary-ff);
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+/* all buttons */
+button {
+  font-family: var(--secondary-ff);
+  font-weight: 600;
+  font-size: var(--ans-tx-sz);
+  color: #F5F7FB;
+  background: #4D5B9E;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.875rem;
+}
+
+/**** quiz Layout ****/
+.quiz-wrapper {
+  border-bottom: 0.05rem solid #DBDEF0;
+  padding: .5rem;
+}
+
+.quiz-wrapper:nth-child(5) {
+  border: none;
+  padding-bottom: 0;
+}
+
+.answers--wrapper {
+  list-style-position: inside;
+  padding: .5rem 0; 
+  display: grid;
+  grid-template-columns: 
+    repeat(auto-fill, minmax(min(100%, 110px), 1fr));
+  gap: 1rem;
+}
+
+.btn-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+/* Start page */
+.title {
+  font-family: var(--primary-ff);
+  color: var(--main-color);
+  font-weight: 700;
+  font-size: 1.9rem;
+  text-align: center;
+}
+
+/* All input elements */
+.category {
+  color: var(--main-color);
+  cursor: pointer;
+  font-family: var(--primary-ff);
+  font-size: medium;
+  border: 0.05rem solid #DBDEF0;
+  border-radius: 0.5rem;
+  padding: .5rem;
+  background-color: #F5F7FB;
+}
+
+.category-title {
+  background: #4D5B9E;
+  color: #F5F7FB;
+  padding: 0.2rem 0.5rem;
+  font-family: var(--secondary-ff);
+  font-size: var(--ans-tx-sz)
+}
+
+.start-btn {
+  cursor: pointer;
+  padding: 1rem 1.75rem;
+}
+
+.form-category {
+  grid-template-columns: 
+    repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+}
+
+.form-difficulty, .form-type {
+  grid-template-columns: 
+    repeat(auto-fit, minmax(min(100%, 156px), 1fr));
+}
+
+fieldset {
+  border: none;
+  display: grid;
+  gap: 1rem;
+  margin: 1.2rem;
+}
+
+
+.start-btn-container {
+  text-align: center;
+  padding: 1rem;
+}
+
+@media (320px <= width <= 425px) {
+  #root {
+    padding: 3rem 0;
+  }
+
+.answers--wrapper {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 128px), 1fr));
+}
+
+  .form-type {
+    grid-template-columns: 
+      repeat(auto-fit, minmax(min(100%, 162px), 1fr));
+  }
+}
+
+@media (width <= 319px) {
+  #root {
+    padding: 2rem 0;
+  }
+
+  .btn-wrapper {
+    flex-direction: column;
+    padding: 0;
+  }
+  
+  .menu-btn {
+    margin: .5rem 0 0;
+    order: 1;
+  }
+
+}
+
