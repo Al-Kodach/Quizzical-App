@@ -37,12 +37,6 @@ body {
   border-bottom-left-radius: 6rem;
 } 
 
-ol, li, strong {
-  border: 2px solid red;
-  padding: 1rem 0;
-  margin: 0;
-}
-
 #root {
   position: relative;
   width: min(100%, 45rem);
@@ -50,7 +44,6 @@ ol, li, strong {
   min-height: 100dvh;
   background: #F5F7FB;
   margin-inline: auto;
-  padding: 4rem;
   overflow: hidden;
 }
 
@@ -218,7 +211,7 @@ fieldset {
 
 @media (width <= 319px) {
   #root {
-    padding: 1rem 0;
+    padding: 2rem 0;
   }
 
   .btn-wrapper {
