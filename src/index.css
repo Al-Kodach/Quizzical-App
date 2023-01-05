@@ -126,7 +126,7 @@ button {
   padding: .5rem 0; 
   display: grid;
   grid-template-columns: 
-    repeat(auto-fill, minmax(min(100%, 110px), 1fr));
+    repeat(auto-fill, minmax(min(100%, 175px), 1fr));
   gap: 1rem;
 }
 
@@ -171,22 +171,14 @@ button {
   padding: 1rem 1.75rem;
 }
 
-.form-category {
-  grid-template-columns: 
-    repeat(auto-fit, minmax(min(100%, 200px), 1fr));
-}
-
-.form-difficulty, .form-type {
-  grid-template-columns: 
-    repeat(auto-fit, minmax(min(100%, 156px), 1fr));
-}
-
 fieldset {
   border: none;
   display: grid;
   gap: 1rem;
   margin: 1.2rem 0;
   padding: 0;
+  grid-template-columns: 
+    repeat(auto-fit, minmax(min(100%, 200px), 1fr));
 }
 
 .start-btn-container {
@@ -199,18 +191,10 @@ fieldset {
     padding: 3rem 0; 
   }
 
-.quiz-wrapper {
-  padding: 1rem 0;
-}
-
-.answers--wrapper {
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 128px), 1fr));
-}
-
-  .form-type {
-    grid-template-columns: 
-      repeat(auto-fit, minmax(min(100%, 162px), 1fr));
+  .quiz-wrapper {
+    padding: 1rem 0;
   }
+
 }
 
 @media (width <= 319px) {
