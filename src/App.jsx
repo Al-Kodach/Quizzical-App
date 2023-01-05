@@ -74,7 +74,7 @@ function App() {
         setIsLoading(true)
         setNewQuiz( oldState => !oldState )
         setCheckAns( oldState => !oldState )  
-        console.log("hi")
+        
       }
     }
 
