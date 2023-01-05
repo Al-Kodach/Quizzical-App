@@ -37,6 +37,12 @@ body {
   border-bottom-left-radius: 6rem;
 } */
 
+ol, li, strong {
+  border: 2px solid red;
+  padding: 1rem;
+  margin: 0;
+}
+
 #root {
   position: relative;
   max-width: 45rem;
