@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
   scroll-behavior: smooth;
-  /* outline: 1px solid limegreen !important;  */ 
+   outline: 1px solid limegreen !important; 
 }
 
 :root {
@@ -46,6 +46,7 @@ body {
   padding: 4rem;
   min-height: 100vh;
   min-height: 100dvh;
+  border: 5px solid red;
 }
 
 #root::after {
