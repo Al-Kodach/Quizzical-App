@@ -44,7 +44,7 @@ export default function MenuPage(props) {
     ))
     
     return (
-        <div className="form">
+        <>
             <h1 className="title">Quizzical</h1>
             <fieldset className="form-category">
                 <legend className="category-title">Select Category</legend>
@@ -70,6 +70,6 @@ export default function MenuPage(props) {
                     Start Quiz
                 </button>
             </div>    
-        </div>
+        </>
     )
 }

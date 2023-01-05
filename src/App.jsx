@@ -23,9 +23,9 @@ function App() {
   const [ allQuiz, setAllQuiz ] = useState( [] ) // Data from API
   const [ NewQuiz, setNewQuiz ] = useState( false ) // call api in quiz page
   const [ error, setError ] = useState( false )
-  const [ isLoading, setIsLoading ] = useState( true )
+  const [ isLoading, setIsLoading ] = useState( true ) // loading state
 
-  const [ checkAns, setCheckAns ] = useState( true )
+  const [ checkAns, setCheckAns ] = useState( true ) // check Answers State
   const [ userScores, setUserScores ] = useState( {numOfCorrectAns: '', totalNumOfQues: ''} )
   
   //  Menu formData fn 
@@ -73,9 +73,9 @@ function App() {
       } else {
         setIsLoading(true)
         setNewQuiz( oldState => !oldState )
-        setCheckAns( oldState => !oldState )  
-        
+        setCheckAns( oldState => !oldState )   
       }
+
     }
 
   // API Call fn
@@ -137,14 +137,14 @@ function App() {
     <div  className='main'> 
       {startQuiz ? 
         isLoading ? <Loading /> :
-        <div>
+        <>
           {quizElements} 
           <Button 
             checkAns={ checkAns }
             togglePlay={ togglePlay }
             userScores={ userScores }        
           />  
-        </div>
+        </>
         : 
         <MenuPage 
           menu={ menu }
