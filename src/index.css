@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
   scroll-behavior: smooth;
-  /* outline: 1px solid limegreen !important;  */ 
+  /* outline: 1px solid limegreen !important;  */
 }
 
 :root {
@@ -20,9 +20,9 @@
 
 /* Global styles */
 body {  
-  margin: 0;
   min-height: 100vh;
   min-height: 100dvh;
+  margin: 0;
 }
 
 #root::before {
@@ -40,12 +40,12 @@ body {
 #root {
   position: relative;
   max-width: 45rem;
-  margin-inline: auto;
-  overflow: hidden;
-  background: #F5F7FB;
-  padding: 4rem;
   min-height: 100vh;
   min-height: 100dvh;
+  background: #F5F7FB;
+  margin-inline: auto;
+  padding: 4rem;
+  overflow: hidden;
 }
 
 #root::after {
@@ -53,16 +53,17 @@ body {
   content: "";
   width: 10vmin;
   height: 10vmin;
-  background: #DEEBF8;
   z-index: 1;
-  left: 0;
+  background: #DEEBF8;
   right: 0;
   bottom: 0;
+  left: 0;
   border-top-right-radius: 9rem;
   
 }
 
 .main {
+  display: grid;
   width: min(100% - 2rem, 35rem);
   margin-inline: auto;
 }
@@ -71,29 +72,29 @@ body {
 
 .question {
   font-family: var(--primary-ff);
-  color: var(--main-color);
-  font-weight: 700;
   font-size: var(--que-tx-sz);
+  font-weight: 700;
+  color: var(--main-color);
 }
 
 .answer {
   font-family: var(--secondary-ff);
-  color: var(--main-color);
   font-weight: 500;
   font-size: var(--ans-tx-sz);
-  border-radius: 0.5rem;
-  border: 0.05rem solid #4D5B9E;
-  cursor: pointer;
-  padding: .2rem .5rem;
   text-align: center;
+  border: 0.05rem solid #4D5B9E;
+  border-radius: 0.5rem;
+  padding: .2rem .5rem;
+  color: var(--main-color);
+  cursor: pointer;
 }
 
 .scores-display {
+  font-family: var(--secondary-ff);
+  font-weight: 700;
+  font-size: 0.75rem;
   text-align: center;
   color: var(--main-color);
-  font-family: var(--secondary-ff);
-  font-size: 0.75rem;
-  font-weight: 700;
   margin-bottom: 0;
 }
 
@@ -102,8 +103,8 @@ button {
   font-family: var(--secondary-ff);
   font-weight: 600;
   font-size: var(--ans-tx-sz);
-  color: #F5F7FB;
   background: #4D5B9E;
+  color: #F5F7FB;
   border: none;
   border-radius: 0.5rem;
   padding: 0.5rem 0.875rem;
@@ -111,8 +112,9 @@ button {
 
 /**** quiz Layout ****/
 .quiz-wrapper {
+  display: grid;
   border-bottom: 0.05rem solid #DBDEF0;
-  padding: .5rem;
+  padding: .75rem;
 }
 
 
@@ -122,12 +124,12 @@ button {
 }
 
 .answers--wrapper {
-  list-style-position: inside;
-  padding: .5rem 0; 
   display: grid;
   grid-template-columns: 
-    repeat(auto-fill, minmax(min(100%, 175px), 1fr));
+  repeat(auto-fill, minmax(min(100%, 121px), 1fr));
   gap: 1rem;
+  list-style-position: inside;
+  padding: .5rem 0; 
 }
 
 .btn-wrapper {
@@ -140,45 +142,44 @@ button {
 /* Start page */
 .title {
   font-family: var(--primary-ff);
-  color: var(--main-color);
   font-weight: 700;
   font-size: 1.9rem;
   text-align: center;
+  color: var(--main-color);
 }
 
 /* All input elements */
 .category {
-  color: var(--main-color);
-  cursor: pointer;
   font-family: var(--primary-ff);
-  font-size: medium;
+  background-color: #F5F7FB;
+  color: var(--main-color);
+  padding: .5rem;
   border: 0.05rem solid #DBDEF0;
   border-radius: 0.5rem;
-  padding: .5rem;
-  background-color: #F5F7FB;
+  cursor: pointer;
 }
 
 .category-title {
+  font-family: var(--secondary-ff);
+  font-size: var(--ans-tx-sz);
   background: #4D5B9E;
   color: #F5F7FB;
   padding: 0.2rem 0.5rem;
-  font-family: var(--secondary-ff);
-  font-size: var(--ans-tx-sz)
 }
 
 .start-btn {
-  cursor: pointer;
   padding: 1rem 1.75rem;
+  cursor: pointer;
 }
 
 fieldset {
-  border: none;
   display: grid;
+  grid-template-columns: 
+  repeat(auto-fit, minmax(min(100%, 200px), 1fr));
   gap: 1rem;
+  border: none;
   margin: 1.2rem 0;
   padding: 0;
-  grid-template-columns: 
-    repeat(auto-fit, minmax(min(100%, 200px), 1fr));
 }
 
 .start-btn-container {
@@ -191,9 +192,20 @@ fieldset {
     padding: 3rem 0; 
   }
 
+  body, .main {
+    margin: 0 auto;
+    padding: 0;
+    
+  }
+
   .quiz-wrapper {
     padding: 1rem 0;
   }
+
+.answers--wrapper {
+  grid-template-columns: 
+    repeat(auto-fill, minmax(min(100%, 160px), 1fr));
+}
 
 }
 
