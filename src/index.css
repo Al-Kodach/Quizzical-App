@@ -28,8 +28,8 @@ body {
  #root::before {
   position: absolute;
   content: "";
-  width: 15vmin;
-  height: 15vmin;
+  width: 12vmin;
+  height: 12vmin;
   background: #FFFAD1;
   z-index: 1;
   right: 0%;
@@ -50,8 +50,8 @@ body {
 #root::after {
   position: absolute;
   content: "";
-  width: 12vmin;
-  height: 12vmin;
+  width: 10vmin;
+  height: 10vmin;
   z-index: 1;
   background: #DEEBF8;
   right: 0;
@@ -65,6 +65,7 @@ body {
   display: grid;
   width: min(100% - 2rem 35rem);
   margin-inline: auto;
+  padding: 3rem;
 }
 
 /*** quiz typography ****/
@@ -187,15 +188,8 @@ fieldset {
 }
 
 @media ( width <= 767px) {
-  #root {
-    padding: 2rem 0; 
-    margin: 0;
-  }
-
-  body, .main {
-    margin: 0 auto;
-    padding: 0;
-    
+ .main {
+    padding: 1rem;
   }
 
   .quiz-wrapper {
@@ -210,8 +204,8 @@ fieldset {
 }
 
 @media (width <= 319px) {
-  #root {
-    padding: 2rem 0;
+  .main {
+    padding: 2rem .5rem;
   }
 
   .btn-wrapper {
