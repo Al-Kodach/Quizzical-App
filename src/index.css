@@ -187,11 +187,10 @@ fieldset {
   padding: 1rem;
 }
 
-@media ( width <= 767px) {
- .main {
-    padding: 1rem;
+@media (max-width: 767px) {
+  .main {
+    padding: 3rem 1rem;
   }
-
   .quiz-wrapper {
     padding: 1rem 0;
   }
@@ -203,9 +202,9 @@ fieldset {
 
 }
 
-@media (width <= 319px) {
+@media (max-width: 300px) {
   .main {
-    padding: 2rem .5rem;
+    padding: 1rem .5rem;
   }
 
   .btn-wrapper {
