@@ -25,7 +25,7 @@ body {
   margin: 0;
 }
 
-/* #root::before {
+ #root::before {
   position: absolute;
   content: "";
   width: 13vmin;
@@ -35,7 +35,7 @@ body {
   right: 0%;
   top: 0%;
   border-bottom-left-radius: 6rem;
-} */
+} 
 
 ol, li, strong {
   border: 2px solid red;
@@ -53,7 +53,7 @@ ol, li, strong {
   padding: 4rem;
   overflow: hidden;
 }
-/* 
+
 #root::after {
   position: absolute;
   content: "";
@@ -66,11 +66,11 @@ ol, li, strong {
   left: 0;
   border-top-right-radius: 9rem;
   
-} */
+} 
 
 .main {
   display: grid;
-  width: min(100% - 2rem, 35rem);
+  width: min(100%  35rem);
   margin-inline: auto;
 }
 
@@ -195,7 +195,8 @@ fieldset {
 
 @media ( width <= 767px) {
   #root {
-    padding: 3rem 0; 
+    padding:  0; 
+    margin: 0;
   }
 
   body, .main {
