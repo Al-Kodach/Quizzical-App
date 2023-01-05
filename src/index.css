@@ -194,7 +194,7 @@ fieldset {
   padding: 1rem;
 }
 
-@media (320px <= width <= 768px) {
+@media ( width <= 767px) {
   #root {
     padding: 3rem 0;
   }
