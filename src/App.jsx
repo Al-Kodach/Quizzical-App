@@ -49,13 +49,13 @@ function App() {
   
   // update url fn
   useEffect( () => {
-    let updateUrl = ''
+    let param = ''
     for(let key in menu) {
       if(menu[key].length > 0) {
-        updateUrl = url += `&${key}=${menu[key]}` 
+        param += `&${key}=${menu[key]}` 
       } 
     }
-    setNewUrl(updateUrl) 
+    setNewUrl(`${url}${param}`) 
   }, [menu, NewQuiz, startQuiz])
 
   
@@ -74,6 +74,7 @@ function App() {
         setIsLoading(true)
         setNewQuiz( oldState => !oldState )
         setCheckAns( oldState => !oldState )  
+        console.log("hi")
       }
     }
 
