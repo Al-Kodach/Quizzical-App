@@ -22,7 +22,6 @@ function App() {
   
   const [ allQuiz, setAllQuiz ] = useState( [] ) // Data from API
   const [ NewQuiz, setNewQuiz ] = useState( false ) // call api in quiz page
-  const [ error, setError ] = useState( false )
   const [ isLoading, setIsLoading ] = useState( true ) // loading state
 
   const [ checkAns, setCheckAns ] = useState( true ) // check Answers State
@@ -84,7 +83,11 @@ function App() {
         try {
           const response = await fetch(newUrl)
           const data = await response.json()
-         
+
+          if(data.length) {
+            setIsLoading(false)
+          }
+          
           setAllQuiz( data.results.map(quiz => {
             return {
               id: nanoid(),
@@ -97,21 +100,11 @@ function App() {
           }))
              
         }
-         catch(error) {
-          if( error.length ) {
-            setError(true)
-          }
+         catch( error ) {
+          console.log( error )
         }  
     }
-
     fetchQuiz()
-    
-    setTimeout(() => {
-      setIsLoading(false)
-    }, 1500)
-
-    return () => clearTimeout(window.setTimeout) 
-    
   }, [startQuiz, NewQuiz] )
   
  
