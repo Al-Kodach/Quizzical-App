@@ -84,7 +84,7 @@ function App() {
           const response = await fetch(newUrl)
           const data = await response.json()
 
-          if(data.length) {
+          if( data.results.length ) {
             setIsLoading(false)
           }
           
